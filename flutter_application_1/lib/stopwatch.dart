@@ -2,7 +2,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class StopwatchExperiemnt extends StatefulWidget {
-  const StopwatchExperiemnt({super.key});
+  final String name;
+  final String email;
+  
+  const StopwatchExperiemnt({
+    super.key,
+    required this.name,
+    required this.email,
+  });
 
   @override
   State<StopwatchExperiemnt> createState() => _StopwatchExperiemntState();
@@ -19,7 +26,7 @@ class _StopwatchExperiemntState extends State<StopwatchExperiemnt> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Stopwatch Experiment'),
+          title: Text('Stopwatch - ${widget.name}'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
